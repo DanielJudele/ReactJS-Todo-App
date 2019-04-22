@@ -1,0 +1,27 @@
+.Todo-List {
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.Todo-Item {
+  -webkit-flex: 1 !important;
+  -ms-flex: 1 !important;
+  flex: 1 !important;
+  background: rgba(19, 175, 223, 0.24) !important;
+  padding: 20px !important;
+}
+
+.Todo-Item ul {
+  list-style-type: none !important;
+  padding: 0 !important;
+}
+
+.Todo-Item-Details {
+  -webkit-flex: 3 !important;
+  -ms-flex: 3 !important;
+  flex: 3 !important;
+  background-color: #f1f1f1 !important;
+  padding: 10px !important;
+}
