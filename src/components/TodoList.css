@@ -9,19 +9,33 @@
   -webkit-flex: 1 !important;
   -ms-flex: 1 !important;
   flex: 1 !important;
-  background: rgba(19, 175, 223, 0.24) !important;
-  padding: 20px !important;
+  /* background: rgba(10, 245, 147, 0.24); */
+  padding: 15px 15px 15px 15px !important;  
+  
 }
 
 .Todo-Item ul {
   list-style-type: none !important;
   padding: 0 !important;
+  cursor: pointer !important;  
+}
+
+.Todo-Item ul li:nth-child(odd) {
+  background-color: ghostwhite !important;  
+}
+
+.Todo-Item-Details div:nth-child(even) {
+  background-color: white !important;  
+}
+
+.Todo-Item ul li{
+  padding: 15px 0px 15px 15px !important;  
+  border: 1px solid ghostwhite;
 }
 
 .Todo-Item-Details {
   -webkit-flex: 3 !important;
   -ms-flex: 3 !important;
   flex: 3 !important;
-  background-color: #f1f1f1 !important;
-  padding: 10px !important;
+  padding: 10px !important;  
 }

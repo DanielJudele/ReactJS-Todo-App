@@ -14,7 +14,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: black;
-  vertical-align: top;
+  vertical-align: top;  
 }
 
 .App-content{
@@ -22,9 +22,12 @@
   vertical-align: top;
   text-align: left;
   margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+  padding: 10px !important;
 }
 .App-link {
-  color: #61dafb;
+  color: rgba(10, 245, 147, 0.24);;
 }
 
 @keyframes App-logo-spin {

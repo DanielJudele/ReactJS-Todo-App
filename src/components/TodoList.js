@@ -5,31 +5,39 @@ class TodoItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showDetail: false
+      view: false,
+      priority: ''
     }
+
+    this.handler = this.handler.bind(this);
   }
+  
+  // This method will be sent to the child component
+  handler(e) {
+    e.preventDefault();
+    this.setState({
+      priority: '[High priority]'
+    });
+  }
+
   onClick(e){
     e.preventDefault();
-    this.setState({showDetail: !this.state.showDetail})
+    this.setState({view: !this.state.view})
   }
   render() {
     return (
-      <li>
-         <a onClick={this.onClick.bind(this)} href='#'>{this.props.item.value} [Priority: {this.props.item.priority}]</a>
-        {this.state.showDetail && <TodoItemDetails details={this.props.item.details}/>}
+      <li onClick={this.onClick.bind(this)} >
+         <span >{this.props.item.value} <span style={{color: 'red'}}>{this.state.priority}</span></span>
+        {this.state.view && <TodoItemDetails details={this.props.item.details} action={this.handler}/>}
       </li>
     )
   }
 }
 
-class TodoItemDetails extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+class TodoItemDetails extends React.Component {    
   render(){
-    var details = this.props.details;
     return(
-      <div className="Todo-Item-Details"> <p>{details}</p><button type="button">High importance</button> </div>
+      <div className="Todo-Item-Details"> <p>{this.props.details}</p><button onClick={this.props.action} type="button">Urgent</button> </div>
     )
   }
 }
